@@ -30,18 +30,49 @@
             </thead>
 
             <tbody class="show-student">
-                <tr>
-                    <td>10001</td>
-                    <td>Phument</td>
-                    <td>Male</td>
-                    <td>Kompong Thom</td>
-                    <td>
-                        <button class=" btn btn-danger">Delete</button>
-                    </td>
-                </tr>
+                
             </tbody>
 
         </table>
     </div>
 </body>
+<script>
+    const fetchJson = async ()  => {
+        try{
+            var response = await fetch('http://localhost:3000/students');
+
+            var students = await response.json(); //we used for convert to js object
+
+            console.log(students);
+
+            var tr = ``;
+
+            students.map((value,index) => {
+                tr += `
+                <tr>
+                    <td>${value.id}</td>
+                    <td>${value.name}</td>
+                    <td>${value.gender}</td>
+                    <td>${value.address}</td>
+                    <td>
+                        <button class=" btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+                `;
+            })
+
+            document.querySelector('.show-student').innerHTML = tr;
+
+
+
+        }catch(e){
+
+            console.log("Error : "+e);
+
+        }
+    }
+
+
+    fetchJson();
+</script>
 </html>
