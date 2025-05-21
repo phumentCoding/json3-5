@@ -65,11 +65,14 @@
 
             let response = await fetch('http://localhost:3000/students',{
                 method : 'POST',
+                headers : {
+                    'Content-Type' : 'application/json'
+                },
                 body   : JSON.stringify(student),
             });
 
             if(response.ok){
-                alert("Create success");
+                window.location.href = "index.html";
             }
 
         }catch(e){
