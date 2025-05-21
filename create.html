@@ -57,21 +57,21 @@
             let data = new FormData(document.getElementById('formInsert'));
 
             let student = {
-                id   : Math.floor(Math.random() * 1000),
+                id   : Math.floor(Math.random() * 1000).toString(),
                 name : data.get('name'),
                 gender : data.get('gender'),
                 address : data.get('address')
             }
 
-
-            console.log(student);
-
-            return false;
-
             let response = await fetch('http://localhost:3000/students',{
                 method : 'POST',
-                body   : [],
+                body   : JSON.stringify(student),
             });
+
+            if(response.ok){
+                alert("Create success");
+            }
+
         }catch(e){
             console.error(e);
         }

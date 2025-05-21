@@ -1,28 +1,34 @@
 {
-    "students" : [
-        {
-            "id" : 453,
-            "name" : "Panha",
-            "gender" : "Male",
-            "address" : "Kompong Spoue"
-        },
-        {
-            "id" : 234,
-            "name" : "Thearith",
-            "gender" : "Male",
-            "address" : "Kompong Cham"
-        },
-        {
-            "id" : 567,
-            "name" : "Reaksa",
-            "gender" : "Male",
-            "address" : "Presh Vihea"
-        },
-        {
-            "id" : 656,
-            "name" : "LeangHort",
-            "gender" : "Male",
-            "address" : "PP"
-        }
-    ]
+  "students": [
+    {
+      "id": "453",
+      "name": "Panha",
+      "gender": "Male",
+      "address": "Kompong Spoue"
+    },
+    {
+      "id": "234",
+      "name": "Thearith",
+      "gender": "Male",
+      "address": "Kompong Cham"
+    },
+    {
+      "id": "567",
+      "name": "Reaksa",
+      "gender": "Male",
+      "address": "Presh Vihea"
+    },
+    {
+      "id": "656",
+      "name": "LeangHort",
+      "gender": "Male",
+      "address": "PP"
+    },
+    {
+      "id": "385",
+      "name": "Phument",
+      "gender": "Male",
+      "address": "KPT"
+    }
+  ]
 }
